@@ -1,9 +1,10 @@
 package com.example.sage.foodsharebook.models;
 
+
 import com.google.gson.annotations.SerializedName;
 
-public class Ingredient{
 
+public class IngredientsItem{
 
 	@SerializedName("image")
 	private String image;
@@ -14,16 +15,8 @@ public class Ingredient{
 	@SerializedName("description")
 	private String description;
 
-	public Ingredient(String name , String description, String url){
-		this.name = name;
-		this.description = description;
-		this.image = url;
-	}
-	public Ingredient(IngredientResponse ingredient){
-		this.name = ingredient.getName();
-		this.description = ingredient.getDescription();
-		this.image = ingredient.getImage();
-	}
+	@SerializedName("id")
+	private int id;
 
 	public void setImage(String image){
 		this.image = image;
@@ -49,15 +42,22 @@ public class Ingredient{
 		return description;
 	}
 
+	public void setId(int id){
+		this.id = id;
+	}
 
+	public int getId(){
+		return id;
+	}
 
 	@Override
  	public String toString(){
 		return 
-			"Ingredient{" + 
+			"IngredientsItem{" + 
 			"image = '" + image + '\'' + 
 			",name = '" + name + '\'' + 
-			",description = '" + description + '\'' +
+			",description = '" + description + '\'' + 
+			",id = '" + id + '\'' + 
 			"}";
 		}
 }

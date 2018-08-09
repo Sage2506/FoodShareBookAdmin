@@ -131,6 +131,8 @@ public class CreateIngredient extends AppCompatActivity {
                             public void response(Boolean bool, IngredientMeasureResponse ingredientMeasure) {
                                 if(ingredientMeasure.getMeasure().getId() == idLast){
                                     Log.i(TAG, "Se crearon las relaciones");
+                                    clearFields();
+                                    Toast.makeText(getApplicationContext(), "Ingrediente agregado exitosamente", Toast.LENGTH_SHORT).show();
                                     enableDisableInputs();
                                 }
                             }

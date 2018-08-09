@@ -54,10 +54,10 @@ public class FoodListActivity extends AppCompatActivity {
                 dishScreen.putExtra("name",dish.getName());
                 dishScreen.putExtra("description", dish.getDescription());
                 dishScreen.putExtra("recipe", dish.getRecipe());
-                dishScreen.putExtra("ingredientsSize",dish.getIngredientIds().size());
+                dishScreen.putExtra("ingredientsSize",dish.getIngredients().size());
                 dishScreen.putExtra("image",dish.getImage());
-                for(int i= 0; i< dish.getIngredientIds().size(); i++){
-                    dishScreen.putExtra("ingredient"+i,dish.getIngredientIds().get(i));
+                for(int i= 0; i< dish.getIngredients().size(); i++){
+                    dishScreen.putExtra("ingredient"+i,dish.getIngredients().get(i).getName());
                 }
                 startActivity(dishScreen);
 
