@@ -33,18 +33,23 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        Intent opcion = new Intent(getApplicationContext(), CreateIngredient.class);;
+        Intent option;
         switch (Integer.parseInt(v.getTag().toString())){
-            case 1 : opcion = new Intent(getApplicationContext(), CreateIngredient.class);
+            case 1 : option = new Intent(getApplicationContext(), CreateIngredient.class);
+                startActivity(option);
                 break;
-            case 2 : opcion = new Intent(getApplicationContext(), IngredientListActivity.class);
+            case 2 : option = new Intent(getApplicationContext(), IngredientListActivity.class);
+                startActivity(option);
                 break;
-            case 3 : opcion = new Intent(getApplicationContext(), FoodListActivity.class);
+            case 3 : option = new Intent(getApplicationContext(), FoodListActivity.class);
+                startActivity(option);
                 break;
             case 4 : logOut();
+                option = new Intent(getApplicationContext(), Splash.class);
+                startActivity(option);
                 break;
         }
-        startActivity(opcion);
+
     }
 
     public void logOut(){
@@ -52,8 +57,6 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         SharedPreferences.Editor editor = prefs.edit();
         editor.putString("token","");
         editor.commit();
-        Intent logout = new Intent(getApplicationContext(), Splash.class);
-        startActivity(logout);
         finish();
     }
 }
