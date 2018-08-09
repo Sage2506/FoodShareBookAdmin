@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">FoodShareBook</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to dish_details -->
+
+    <!-- Strings related to food_list -->
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+
+    <!-- Strings related to content_food_list -->
+
+    <!-- Strings related to item_dish -->
+
+    <!-- Strings related to item_ingredient -->
+
+    <!-- Strings related to item_measure -->
+    <string name="measure_name">Name</string>
+
+    <!-- Strings related to create_ingredient -->
+    <string name="name_text">Ingrediente</string>
+    <string name="description_text">Descripcion</string>
+    <string name="submit">Aceptar</string>
+
+</resources>
